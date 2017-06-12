@@ -1,0 +1,123 @@
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    text-align: left;
+    min-height: 27px;
+    color: #eee;
+    font-family: 'Raleway', sans-serif;
+}
+
+.h4, h4 {
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 18px;
+    background: #555;
+    height: 25px;
+    padding: 3px 8px;
+}
+
+#mainDiv {
+    height: calc( 100% - 60px );
+    width: 100%;
+    padding: 0 25%;
+    padding-top: 150px;
+    text-align: center;
+    position: fixed;
+}
+
+.right-panel{
+    max-height: 400px;;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-shadow: 1px 1px 1px 1px rgba(8, 8, 8, 0.62);
+    padding: 10px 0 10px 0;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    color: white;
+    text-align: left;
+    font-family: 'Bubbler One', sans-serif;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.heading{
+    margin-top : 0 !important;
+    padding-top:15px;
+}
+
+#searchInput{
+    font-family: 'Bubbler One', sans-serif;
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    width: 100%;
+    outline: none;
+    color: white;
+    font-size: 44px;
+}
+
+
+li.noResults {
+    color: rgba(255, 0, 0, 0.77);
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0.2;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: black;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}

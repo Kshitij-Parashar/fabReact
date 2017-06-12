@@ -1,27 +1,20 @@
 {
-  "name": "react-todo",
+  "name": "fab-hotels",
   "version": "1.0.0",
-  "description": "React-ToDo",
+  "description": "FabHotels",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonycodes/React-ToDo.git"
-  },
-  "author": "Joannier Pinales",
+  "author": "Kshitij Parashar",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jonycodes/React-ToDo/issues"
-  },
-  "homepage": "https://github.com/jonycodes/React-ToDo#readme",
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",
+    "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "browserify": "^13.3.0",
     "eslint": "^3.13.1",
