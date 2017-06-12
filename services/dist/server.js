@@ -24,6 +24,16 @@ app.use(_bodyParser2.default.json());
 
 //support parsing of application/x-www-form-urlencoded post data
 app.use(_bodyParser2.default.urlencoded({ extended: true }));
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
+
+    // and remove cacheing so we get the most recent comments
+    res.setHeader('Cache-Control', 'no-cache');
+    next();
+});
 _mongoose2.default.connect('mongodb://localhost/todos');
 /*
   Here is where we're going put most of the serve logic
