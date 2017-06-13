@@ -1,3 +1,5 @@
+
+
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser'
@@ -16,7 +18,9 @@ app.use(function(req, res, next) {
     res.setHeader('Cache-Control', 'no-cache');
     next();
 });
-mongoose.connect('mongodb://root:6LQWp348L8QA@localhost:27017/todos');
+mongoose.connect('mongodb://root:6LQWp348L8QA@localhost:27017/admin');
+//mongoose.on("error",console.log.error.bind(console, "Connetion error"));
+
 /*
   Here is where we're going put most of the serve logic
 */

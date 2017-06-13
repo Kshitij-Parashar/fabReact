@@ -33,7 +33,9 @@ app.use(function (req, res, next) {
     res.setHeader('Cache-Control', 'no-cache');
     next();
 });
-_mongoose2.default.connect('mongodb://localhost/todos');
+_mongoose2.default.connect('mongodb://root:6LQWp348L8QA@localhost:27017/admin');
+//mongoose.on("error",console.log.error.bind(console, "Connetion error"));
+
 /*
   Here is where we're going put most of the serve logic
 */
@@ -74,10 +76,10 @@ var server = function server() {
             logError(error);
             response.send(deletedTodo);
         });
-    });
+    }
 
     // 3000 is the port number, this could be any number from  0 to 9999
-    app.listen(3000, function () {
+    );app.listen(3000, function () {
         console.log('App listening on port 3000!');
     });
 };
