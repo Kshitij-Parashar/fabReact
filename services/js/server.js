@@ -14,8 +14,9 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
-    // and remove cacheing so we get the most recent comments
-    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Access-Control-Allow-Credentials',true);    
+// and remove cacheing so we get the most recent comments
+   // res.setHeader('Cache-Control', 'no-cache');
     next();
 });
 mongoose.connect('mongodb://root:6LQWp348L8QA@localhost:27017/admin');

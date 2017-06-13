@@ -25,9 +25,9 @@ class ListHolder extends React.Component {
         if(this.state.filterVal.length > 1) {
             var options = {
                 method: 'POST',
-                url: 'http://localhost:3000/get/all',
+                url: 'http://34.227.13.186:3000/get/all',
                 headers: {
-                    'cache-control': 'no-cache',
+             
                     'content-type': 'application/json'
                 },
                 body: {
