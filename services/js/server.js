@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
     res.setHeader('Cache-Control', 'no-cache');
     next();
 });
-mongoose.connect('mongodb://0.0.0.0:27017/todos');
+mongoose.connect('mongodb://localhost:27017/todos');
 /*
   Here is where we're going put most of the serve logic
 */
